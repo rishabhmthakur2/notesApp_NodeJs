@@ -1,0 +1,28 @@
+{
+  "name": "notesApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhmthakur2/notesApp_NodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabhmthakur2/notesApp_NodeJs/issues"
+  },
+  "homepage": "https://github.com/rishabhmthakur2/notesApp_NodeJs#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
