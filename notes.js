@@ -1,4 +1,5 @@
 const fs = require('fs');
+const chalk = require('chalk');
 
 const addNote = (title, body) => {
     const notes = loadNotes();
@@ -55,7 +56,19 @@ const loadNotes = () => {
     }
 };
 
+const listNotes = () =>{
+    const notes = loadNotes();
+    if(notes.length>0){
+        console.log(chalk.green.bold("List of your notes"));
+        notes.forEach( (note) => console.log(`-> ${note.title}`));
+    }
+    else{
+        console.log(chalk.red("Your list doesn't have any notes"));
+    }
+};
+
 module.exports = {
     addNote,
-    removeNote
+    removeNote,
+    listNotes
 };
