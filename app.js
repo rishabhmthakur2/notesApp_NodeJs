@@ -17,17 +17,13 @@ yargs.command({
             type: 'string'
         }
     },
-    handler: (argv) => {
-        notesHandler.addNote(argv.title, argv.body);
-    }
+    handler: (argv) => notesHandler.addNote(argv.title, argv.body)
 });
 
 yargs.command({
     command: 'remove',
     describe: 'Removing the specified note',
-    handler: (argv) => {
-        notesHandler.removeNote(argv.title);
-    }
+    handler: (argv) => notesHandler.removeNote(argv.title)
 });
 
 yargs.command({
@@ -43,4 +39,3 @@ yargs.command({
 });
 
 yargs.parse();
-//console.log(yargs.argv);

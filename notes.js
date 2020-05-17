@@ -2,11 +2,7 @@ const fs = require('fs');
 
 const addNote = (title, body) => {
     const notes = loadNotes();
-    const duplicateEntries = notes.filter((note) => {
-        if(note.title === title){
-            return true;
-        }
-    });
+    const duplicateEntries = notes.filter((note) => note.title === title);
     if(duplicateEntries.length === 0){
         const note = {
             title,
@@ -36,9 +32,7 @@ const removeNote = (title) => {
     // if(flag === 0) {
     //     console.log("No such note exists");
     // }
-    const notesToKeep = notes.filter((note)=>{
-        return note.title != title;
-    });
+    const notesToKeep = notes.filter((note) => note.title != title);
     if(notes.length > notesToKeep.length){
         saveNotes(notesToKeep);
         console.log(`Note removed: ${title}`);
